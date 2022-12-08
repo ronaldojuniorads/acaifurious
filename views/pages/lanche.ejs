@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head", {page: "lanche"})%> 
+<body>
+    <%- include("../partials/header.ejs")%>
+
+    <% lanche.nome %>
+
+    <main>
+        <div class="lanche"> 
+            <div class="imagem">
+                <img src="<%=lanche.imagem%>" alt="">
+            </div>
+            <div class="nome">
+                <span><%=lanche.nome%></span>
+            </div>
+        </div>
+        <div class="variacoes">
+            <div class="container-slide">
+            <%for(let variacao of lanche.variacoes){%>
+                <div class="variacao">
+                    <div class="b top"></div>
+                    <div class="b left"></div>
+                    <div class="b bottom"></div>
+                    <div class="b right"></div>
+                    <span><%=variacao.variacao%></span>
+                    <span>preço: <strong>R$<%=variacao.preco%>,00</span></strong>
+                    <p><%=variacao.descricao%></p>
+                </div>
+            <%}%>
+            </div>
+        </div>
+        <div class="arrow previous"></div>
+        <div class="arrow next"></div>
+    </main>
+
+    <script type="module" src="scripts/main.js"></script> 
+</body>
+</html>

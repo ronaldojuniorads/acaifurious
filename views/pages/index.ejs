@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<%- include("../partials/head", {page: "index"})%> 
+<body>
+    <%- include("../partials/header.ejs")%>
+    <main>  
+        <% for (let sessao of BD){ %>
+                <section>
+                    <% for(let lanche of sessao) {%>
+                            <div class="lanche"  id="<%=lanche.id%>">
+                                <div class="b top"></div>
+                                <div class="b left"></div>
+                                <div class="b bottom"></div>
+                                <div class="b right"></div>
+                                <img src="<%= lanche.imagem %>" alt="">
+                                <span><%= lanche.nome %></span>
+                            </div> 
+                    <% } %>
+                </section>
+                    
+        <% } %> 
+    </main>
+    <script type="module" src="scripts/main.js"></script> 
+    
+</body>
+</html>

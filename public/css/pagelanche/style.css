@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; 
+}
+body{ 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    padding: 30px;
+    align-items: center; 
+    background-color: black;
+    font-family: 'Courier New', monospace;
+    color: #ffffff;
+    background-image: linear-gradient(200deg, rgba(0, 0, 0, 0.342), rgba(255, 0, 221, 0.692), rgba(23, 83, 248, 0.637));
+    background-repeat: no-repeat;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+header div#logo{
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+header a{
+    color: #AD00FF;
+}
+header nav{
+    display: flex;
+    font-size: 1.3rem;
+}
+header nav ul{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 0 40px;
+} 
+header nav > div ::before{
+    content: url("../../icones/menu.svg");
+    cursor: pointer;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main > div:first-child{  
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+main > div.lanche div.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+main > div.lanche div.nome{  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+/* 
+main > div.variacoes{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+}
+main > div.variacoes div.variacao{
+    flex-shrink: 0;
+    position: relative;
+    width: 300px;
+    height: 130px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #AD00FF;
+    border-radius: 10px;
+} */
+
+
+/* front alternativo para pagina lanche */
+
+main div.variacoes {
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    overflow: hidden;
+    position: relative;
+}
+main div.variacoes div.container-slide{
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0; 
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    transition: all 1s;
+}
+
+main div.variacoes div.container-slide div.variacao{
+    flex-shrink: 0;
+    background-color: #AD00FF;
+    width: 400px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    text-align: center;
+    border-radius: 10px; 
+    position: relative;
+}
+main div.arrow{
+    position: absolute; 
+    width: 40px;
+    height: 40px;
+    margin-top: 150px;
+}
+main div.arrow.previous{
+    left: 0;
+    background-image: url("../../icones/arrow_previous.svg"); 
+    background-size: contain;
+
+}
+main div.arrow.next{
+    right: 0;
+    background-image: url("../../icones/arrow_next.svg");
+    background-size: contain;
+}
+main > div.variacoes div span:nth-of-type(1){
+    font-weight: 900;
+    color: rgb(255, 145, 0);
+    font-size: 1.3rem;
+
+}
+main > div.variacoes div span:nth-of-type(2){
+    font-weight: 900;
+    font-size: 1.1rem; 
+    color: rgb(255, 145, 0);  
+}
+main > div.variacoes div p{
+    font-weight: 900;
+    font-size: .9rem; 
+} 
+main > div.variacoes div.variacao:hover strong{ 
+    border-bottom: 2px solid #ffffff;
+}
+
+main > div.variacoes div.variacao div.b{
+    position: absolute;
+    background-color: rgb(255, 145, 0);
+    transition: all 0.5s;
+    border-radius: 5px;
+} 
+main > div.variacoes div.variacao div.top{
+    top: 0; 
+    left: 0;
+    width: 0%;
+    height: 5px; 
+}
+main > div.variacoes div.variacao div.right{
+    right: 0; 
+    top: 0;
+    width: 5px;
+    height: 0%; 
+}
+main > div.variacoes div.variacao div.bottom{
+    bottom: 0; 
+    right: 0;
+    width: 0%;
+    height: 5px;  
+} 
+main > div.variacoes div.variacao div.left{
+    left: 0; 
+    bottom: 0;
+    width: 5px;
+    height: 0%; 
+}
+main > div.variacoes div.variacao:hover div.top{
+    width: 100%; 
+}
+main > div.variacoes div.variacao:hover div.right{
+    height: 100%; 
+}
+main > div.variacoes div.variacao:hover div.bottom{
+    width: 100%; 
+}
+main > div.variacoes div.variacao:hover div.left{
+    height: 100%; 
+}

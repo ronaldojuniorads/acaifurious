@@ -1,0 +1,20 @@
+<div id="carrinho">
+    <div class="lanches">
+        <% for (let lanche of BDCarrinho) { %>
+            <div class="lanche">
+                <div>
+                    <img src="<%= lanche.img %>" alt="">
+                </div>
+                <div>
+                    <span>açai<%= lanche.nome %></span>
+                    <span>R$<%=lanche.preco%></span>
+                </div>
+                <div></div>
+            </div>
+        <%}%>
+    </div>
+    <div class="preco-finalizar">
+        <div class="preco-total"></div>
+        <div class="finalizar"></div>
+    </div>
+</div>

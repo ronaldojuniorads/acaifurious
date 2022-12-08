@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; 
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+    padding: 30px;
+    gap: 10px;
+    background-color: black;
+    font-family: 'Courier New', monospace;
+    color: rgb(255, 145, 0);
+    background-image: linear-gradient(200deg, rgba(0, 0, 0, 0.342) 30%, rgba(255, 0, 221, 0.692), rgba(23, 83, 248, 0.637));
+    background-repeat: no-repeat;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    z-index: 1;
+}
+header div#logo{
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+header a{
+    color: #AD00FF;
+}
+header nav{
+    display: flex;
+    font-size: 1.3rem;
+    position: relative;
+}
+header nav ul{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 0 40px;
+}
+header nav > div::before{
+    content: url("../../icones/menu.svg");
+    cursor: pointer;
+}
+header nav ul li div#carrinho{
+    background-color: red;
+    position: absolute;
+    width: 100%; 
+    left: 0;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+header nav ul li div#carrinho > div:first-child{
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+
+}
+header nav ul li div#carrinho > div:first-child div{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    background-color: rgb(163, 116, 116);
+
+}
+header nav ul li div#carrinho > div:first-child > div div{
+    height: 100%;
+}
+header nav ul li div#carrinho > div:first-child > div div:nth-child(1){
+    width: 40%;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header nav ul li div#carrinho > div:first-child > div div:nth-child(1) img{
+    width: 60%; 
+}
+header nav ul li div#carrinho > div:first-child > div div:nth-child(2){
+    width: 45%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+
+}
+header nav ul li div#carrinho > div:first-child > div div:nth-child(3){
+    width: 15%;
+    background-image: url("../../icones/remove_FILL1_wght700_GRAD200_opsz48.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+header nav ul li div#carrinho > div:last-child{
+    background-color: orange; 
+    display: flex;
+    justify-content: space-between;
+    
+}
+header nav ul li div#carrinho > div:last-child div{
+    width: 45%;
+    height: 50px;
+    background-color: black;
+
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    
+}
+section{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+
+}
+section > div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    width: 250px;
+    height: 150px;
+    /* outline: 3px solid rgba(58, 10, 73, 0); 
+    transition: outline 1s; */
+}
+section > div div.b{
+    position: absolute;
+    background-color: rgb(255, 145, 0);
+    transition: all 0.5s;
+    border-radius: 5px;
+} 
+section > div div.top{
+    top: 0; 
+    left: 0;
+    width: 0%;
+    height: 5px; 
+}
+section > div div.right{
+    right: 0; 
+    top: 0;
+    width: 5px;
+    height: 0%; 
+}
+section > div div.bottom{
+    bottom: 0; 
+    right: 0;
+    width: 0%;
+    height: 5px;  
+} 
+section > div div.left{
+    left: 0; 
+    bottom: 0;
+    width: 5px;
+    height: 0%; 
+}
+section > div:hover div.top{
+    width: 100%; 
+}
+section > div:hover div.right{
+    height: 100%; 
+}
+section > div:hover div.bottom{
+    width: 100%; 
+}
+section > div:hover div.left{
+    height: 100%; 
+}
+section div img{
+    max-width: 60%;
+    max-height: 60%;
+    transition: all 1s;
+}
+section div:hover img{
+    transform: scale(1.2);
+
+}
+
+/* janela do lanche */
+main div.janela{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background-color: red;
+    display: none;
+}
+
+main div.janela div.b{
+    position: absolute;
+    background-color: rgb(255, 145, 0);
+    transition: all 0.2s;
+    border-radius: 5px;
+} 
+main div.janela div.top{
+    top: 0; 
+    left: 0;
+    width: 0%;
+    height: 5px; 
+}
+main div.janela div.right{
+    right: 0; 
+    top: 0;
+    width: 5px;
+    height: 0%; 
+}
+main div.janela div.bottom{
+    bottom: 0; 
+    right: 0;
+    width: 0%;
+    height: 5px;  
+} 
+main div.janela div.left{
+    left: 0; 
+    bottom: 0;
+    width: 5px;
+    height: 0%; 
+}
+main div.janela:hover div.top{
+    width: 100%; 
+}
+main div.janela:hover div.right{
+    height: 100%; 
+}
+main div.janela:hover div.bottom{
+    width: 100%; 
+}
+main div.janela:hover div.left{
+    height: 100%; 
+}
